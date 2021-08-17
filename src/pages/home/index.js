@@ -1,14 +1,23 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { View, StyleSheet } from 'react-native'
+import { HeaderComponent } from '../../components'
+import { colors } from '../../utils'
 
 export class Home extends Component {
     render() {
         return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>Home Screen</Text>
+            <View style={styles.page}>
+                <HeaderComponent />                
             </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    page: {
+        flex: 1,
+        backgroundColor: colors.white
+    }
+})
 
 export default Home
