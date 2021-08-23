@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet, TextInput } from 'react-native'
 import { IconSearch } from '../../../assets'
-import { colors, responsiveHeight } from '../../../utils'
+import { colors, fonts, responsiveHeight } from '../../../utils'
 import { Button } from '../../kecil'
 
 export class HeaderComponent extends Component {
@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     input: {
-        fontSize: 16
+        fontSize: 16,
+        fontFamily: fonts.primary.regular
     }
 })
 
