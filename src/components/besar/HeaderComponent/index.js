@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet, TextInput } from 'react-native'
+import { View, StyleSheet, TextInput } from 'react-native'
 import { IconSearch } from '../../../assets'
 import { colors, fonts, responsiveHeight } from '../../../utils'
 import { Button } from '../../kecil'
