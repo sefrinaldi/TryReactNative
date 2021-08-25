@@ -3,6 +3,6 @@ export const fonts = {
         light: "PublicSans-Light",
         regular: "PublicSans-Regular",
         semiBold: "PublicSans-SemiBold",
-        bold: "PublicSans-bold"
+        bold: "PublicSans-Bold"
     }
 }

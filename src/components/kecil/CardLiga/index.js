@@ -36,6 +36,6 @@ const styles = StyleSheet.create({
     },
     logo: {
         width: responsiveWidth(57),
-        height: responsiveHeight(70),
+        height: responsiveHeight(57),
     }
 })

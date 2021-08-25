@@ -1,23 +1,25 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, Text } from 'react-native'
-import { BannerSlider, HeaderComponent, ListLiga } from '../../components'
+import { View, StyleSheet, Text, ScrollView } from 'react-native'
+import { BannerSlider, HeaderComponent, Jarak, ListJersey, ListLiga } from '../../components'
 import { colors, fonts } from '../../utils'
-import { dummyLigas } from '../../data'
+import { dummyJersey, dummyLigas } from '../../data'
 
 export class Home extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            ligas: dummyLigas
+            ligas: dummyLigas,
+            jerseys: dummyJersey
         }
     }
 
     render() {
-        const { ligas } = this.state
+        const { ligas, jerseys } = this.state
         return (
             <View style={styles.page}>
-                {/* <FlatList 
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    {/* <FlatList 
                     renderItem={<HeaderComponent />}
                 />
                 <FlatList 
@@ -26,16 +28,22 @@ export class Home extends Component {
                 <FlatList 
                     renderItem={<ListLiga />}
                 /> */}
-                <View>
-                    <HeaderComponent />
-                </View>
-                <View>
-                    <BannerSlider />
-                </View>
-                <View style={styles.pilihLiga}>
-                    <Text style={styles.label}>Pilih Liga</Text>
-                    <ListLiga ligas={ligas} />
-                </View>
+                    <View>
+                        <HeaderComponent />
+                    </View>
+                    <View>
+                        <BannerSlider />
+                    </View>
+                    <View style={styles.pilihLiga}>
+                        <Text style={styles.label}>Pilih Liga</Text>
+                        <ListLiga ligas={ligas} />
+                    </View>
+                    <View style={styles.listJersey}>
+                        <Text style={styles.label}>Pilih <Text style={styles.boldLabel}>Jersey</Text> yg anda inginkan</Text>
+                        <ListJersey jerseys={jerseys} />
+                    </View>
+                    <Jarak height={100}/>
+                </ScrollView>
             </View >
         )
     }
@@ -53,6 +61,14 @@ const styles = StyleSheet.create({
     label: {
         fontSize: 18,
         fontFamily: fonts.primary.regular
+    },
+    listJersey: {
+        marginHorizontal: 30,
+        marginTop: 10,        
+    },
+    boldLabel: {
+        fontSize: 18,
+        fontFamily: fonts.primary.bold
     }
 })
 
