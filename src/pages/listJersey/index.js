@@ -1,19 +1,64 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native'
+import React, { Component } from 'react'
+import { View, StyleSheet, Text, ScrollView } from 'react-native'
+import { BannerSlider, Button, HeaderComponent, Jarak, ListJerseys, ListLiga } from '../../components'
+import { colors, fonts } from '../../utils'
+import { dummyJersey, dummyLigas } from '../../data'
 
-
-class ListJersey extends Component {
+export class ListJersey extends Component {
     constructor(props) {
-        super(props);
-        this.state = {  }
+        super(props)
+
+        this.state = {
+            ligas: dummyLigas,
+            jerseys: dummyJersey
+        }
     }
-    render() { 
-        return ( 
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>List Jersey Screen</Text>
-            </View>
-         );
+
+    render() {
+        const { ligas, jerseys } = this.state
+        return (
+            <View style={styles.page}>
+                <View>
+                    <HeaderComponent />
+                </View>
+                <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
+                    <View style={styles.pilihLiga}>
+                        <ListLiga ligas={ligas} />
+                    </View>
+                    <View style={styles.listJersey}>
+                        <Text style={styles.label}>Pilih <Text style={styles.boldLabel}>Jersey</Text> yg anda inginkan</Text>
+                        <ListJerseys jerseys={jerseys} />
+                    </View>
+                    <Jarak height={100} />
+                </ScrollView>
+            </View >
+        )
     }
 }
- 
-export default ListJersey;
+
+const styles = StyleSheet.create({
+    page: {
+        flex: 1,
+        backgroundColor: colors.white
+    },
+    container: {
+        marginTop: -30
+    },
+    pilihLiga: {
+        marginHorizontal: 30,
+    },
+    label: {
+        fontSize: 18,
+        fontFamily: fonts.primary.regular
+    },
+    listJersey: {
+        marginHorizontal: 30,
+        marginTop: 10,
+    },
+    boldLabel: {
+        fontSize: 18,
+        fontFamily: fonts.primary.bold
+    }
+})
+
+export default ListJersey

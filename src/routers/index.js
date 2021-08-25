@@ -11,7 +11,7 @@ const MyApp = () => {
     return (
       <Tab.Navigator tabBar={props => <BottomNavigator {...props} />}>
         <Tab.Screen name="Home" component={Home} options={{ headerShown: false }}/>
-        <Tab.Screen name="ListJersey" component={ListJersey} options={{ title: "Jersey"}} />
+        <Tab.Screen name="ListJersey" component={ListJersey} options={{ headerShown: false }} />
         <Tab.Screen name="Profile" component={Profile} />
       </Tab.Navigator>
     );

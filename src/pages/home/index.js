@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, Text, ScrollView } from 'react-native'
-import { BannerSlider, HeaderComponent, Jarak, ListJersey, ListLiga } from '../../components'
+import { BannerSlider, Button, HeaderComponent, Jarak, ListJerseys, ListLiga } from '../../components'
 import { colors, fonts } from '../../utils'
 import { dummyJersey, dummyLigas } from '../../data'
 
@@ -40,8 +40,9 @@ export class Home extends Component {
                     </View>
                     <View style={styles.listJersey}>
                         <Text style={styles.label}>Pilih <Text style={styles.boldLabel}>Jersey</Text> yg anda inginkan</Text>
-                        <ListJersey jerseys={jerseys} />
-                    </View>
+                        <ListJerseys jerseys={jerseys} />
+                        <Button title="Lihat semua" type="text" padding={7} />
+                    </View>                    
                     <Jarak height={100}/>
                 </ScrollView>
             </View >

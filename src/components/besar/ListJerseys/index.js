@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { CardJersey } from '../../kecil';
 
 
-class ListJersey extends Component {
+class ListJerseys extends Component {
     constructor(props) {
         super(props);
         this.state = {}
@@ -22,7 +22,7 @@ class ListJersey extends Component {
     }
 }
 
-export default ListJersey;
+export default ListJerseys;
 
 const styles = StyleSheet.create({
     container: {
