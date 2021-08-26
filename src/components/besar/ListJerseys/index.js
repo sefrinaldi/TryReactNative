@@ -9,12 +9,12 @@ class ListJerseys extends Component {
         this.state = {}
     }
     render() {
-        const { jerseys } = this.props
+        const { jerseys, navigation } = this.props
         return (
             <View style={styles.container}>
                 {jerseys.map(jersey => {
                     return (
-                        <CardJersey key={jersey.id} jersey={jersey}/>
+                        <CardJersey key={jersey.id} jersey={jersey} navigation={navigation}/>
                     )
                 })}
             </View>

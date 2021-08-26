@@ -3,14 +3,19 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { colors, fonts, responsiveHeight, responsiveWidth } from '../../../utils'
 import Button from '../Button'
 
-const CardJersey = ({ jersey }) => {
+const CardJersey = ({ jersey, navigation }) => {
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.card}>
-                <Image source={jersey.picture[0]} style={styles.picture}/>
+                <Image source={jersey.picture[0]} style={styles.picture} />
                 <Text style={styles.text}>{jersey.name}</Text>
             </TouchableOpacity>
-            <Button type="text" title="Detail" padding={7}/>
+            <Button
+                type="text"
+                title="Detail"
+                padding={7}
+                onPress={() => navigation.navigate('JerseyDetail', { jersey })}
+            />
         </View>
     )
 }
@@ -22,12 +27,12 @@ const styles = StyleSheet.create({
         marginBottom: 25
     },
     card: {
-      backgroundColor: colors.yellow,
-      width: responsiveWidth(150),
-      alignItems: 'center',
-      padding: 10,    
-      borderRadius: 10,
-      marginBottom: 10
+        backgroundColor: colors.yellow,
+        width: responsiveWidth(150),
+        alignItems: 'center',
+        padding: 10,
+        borderRadius: 10,
+        marginBottom: 10
     },
     picture: {
         width: 124,

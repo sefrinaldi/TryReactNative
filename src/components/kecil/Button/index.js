@@ -1,26 +1,28 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { IconShoppingCart } from '../../../assets'
+import { IconBack, IconShoppingCart } from '../../../assets'
 import { colors } from '../../../utils'
 import TextOnly from './TextOnly'
 
 const Button = (props) => {
 
-    const { icon, totalCart, padding, type, title } = props
+    const { icon, totalCart, padding, type, title, onPress } = props
 
     const Icon = () => {
         if (icon === "cart") {
             return <IconShoppingCart />
+        } else if (icon === "arrow-left") {
+            return <IconBack />
         }
         return <IconShoppingCart />
     }
 
     if (type === "text"){
-        return <TextOnly {...props} />
+        return <TextOnly {...props} onPress={onPress} />
     }
     
     return (
-        <TouchableOpacity style={styles.container(padding)}>
+        <TouchableOpacity style={styles.container(padding)} onPress={onPress}>
             <Icon />
             {totalCart && (
                 <View style={styles.notif}>
@@ -36,11 +38,8 @@ export default Button
 const styles = StyleSheet.create({
     container: (padding) => ({
         backgroundColor: colors.white,
-        marginLeft: 10,
         borderRadius: 5,
-        padding: padding,
-        // alignItems: "center",
-        // justifyContent: "center"        
+        padding: padding       
     }),
     notif: {
         position: "absolute",

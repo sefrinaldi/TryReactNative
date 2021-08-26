@@ -8,10 +8,10 @@ class CardLiga extends Component {
         this.state = {}
     }
     render() {
-        const { ligas } = this.props
+        const { liga } = this.props
         return (
             <TouchableOpacity style={styles.container}>
-                <Image source={ligas.picture} style={styles.logo} />
+                <Image source={liga.picture} style={styles.logo} />
             </TouchableOpacity>
         );
     }

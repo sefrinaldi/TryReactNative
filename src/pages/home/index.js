@@ -16,6 +16,8 @@ export class Home extends Component {
 
     render() {
         const { ligas, jerseys } = this.state
+        const { navigation } = this.props
+        console.log("nav: ", navigation);
         return (
             <View style={styles.page}>
                 <ScrollView showsVerticalScrollIndicator={false}>
@@ -40,7 +42,7 @@ export class Home extends Component {
                     </View>
                     <View style={styles.listJersey}>
                         <Text style={styles.label}>Pilih <Text style={styles.boldLabel}>Jersey</Text> yg anda inginkan</Text>
-                        <ListJerseys jerseys={jerseys} />
+                        <ListJerseys jerseys={jerseys} navigation={navigation}/>
                         <Button title="Lihat semua" type="text" padding={7} />
                     </View>                    
                     <Jarak height={100}/>

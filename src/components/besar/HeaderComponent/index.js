@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, StyleSheet, TextInput } from 'react-native'
 import { IconSearch } from '../../../assets'
 import { colors, fonts, responsiveHeight } from '../../../utils'
-import { Button } from '../../kecil'
+import { Button, Jarak } from '../../../components'
 
 export class HeaderComponent extends Component {
     render() {
@@ -15,6 +15,8 @@ export class HeaderComponent extends Component {
                         <IconSearch />
                         <TextInput placeholder="Cari Jersey" style={styles.input} />
                     </View>
+
+                    <Jarak width={10} />
 
                     {/* ButtonCart */}
                     <Button icon="cart" padding={10}/>
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
     wrapperHeader: {
         marginTop: 15,
         marginHorizontal: 30,
-        flexDirection: "row"
+        flexDirection: "row",
     },
     searchSection: {
         flex: 1,

@@ -16,6 +16,7 @@ export class ListJersey extends Component {
 
     render() {
         const { ligas, jerseys } = this.state
+        const { navigation } = this.props
         return (
             <View style={styles.page}>
                 <View>
@@ -27,7 +28,7 @@ export class ListJersey extends Component {
                     </View>
                     <View style={styles.listJersey}>
                         <Text style={styles.label}>Pilih <Text style={styles.boldLabel}>Jersey</Text> yg anda inginkan</Text>
-                        <ListJerseys jerseys={jerseys} />
+                        <ListJerseys jerseys={jerseys} navigation={navigation}/>
                     </View>
                     <Jarak height={100} />
                 </ScrollView>

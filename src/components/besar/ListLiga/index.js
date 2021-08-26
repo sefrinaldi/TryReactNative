@@ -9,7 +9,7 @@ class ListLiga extends Component {
             <View style={styles.container}>
                 { ligas.map(liga => {
                     return (
-                        <CardLiga ligas={liga} key={liga.id}/>
+                        <CardLiga liga={liga} key={liga.id}/>
                     )
                 })}
             </View>
