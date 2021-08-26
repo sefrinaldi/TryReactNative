@@ -1,29 +1,32 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { colors, fonts, responsiveHeight, responsiveWidth } from '../../utils';
-import { dummyProfile } from '../../data';
+import { dummyMenus, dummyProfile } from '../../data';
 import { RFValue } from "react-native-responsive-fontsize";
 import { heightMobileUI } from '../../utils/constant';
+import { ListMenu } from '../../components';
 
 
 class Profile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            profile: dummyProfile
+            profile: dummyProfile,
+            menus: dummyMenus
         }
     }
     render() {
-        const { profile } = this.state
+        const { profile, menus } = this.state
         return (
             <View style={styles.page}>
                 <View style={styles.container}>
                     <Image source={profile.avatar} style={styles.foto} />
                     <View style={styles.profile}>
                         <Text style={styles.name}>{profile.name}</Text>
-                        <Text style={styles.desc}>{profile.hp}</Text>
+                        <Text style={styles.desc}>No. Hp {profile.hp}</Text>
                         <Text style={styles.desc}>{profile.alamat} {profile.kota}</Text>
                     </View>
+                    <ListMenu menus={menus}/>
                 </View>
             </View>
         );
@@ -38,7 +41,7 @@ const styles = StyleSheet.create({
     container: {
         position: 'absolute',
         bottom: 0,
-        height: responsiveHeight(530),
+        height: responsiveHeight(580),
         backgroundColor: colors.white,
         width: '100%',
         borderTopLeftRadius: 40,

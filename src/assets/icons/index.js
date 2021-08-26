@@ -11,6 +11,8 @@ import IconChangePassword from './change-password.svg'
 import IconSignOut from './sign-out.svg'
 import IconEditProfile from './user-edit.svg'
 import IconHistory from './history.svg'
+import IconBack from './arrow-left.svg'
+import IconWhiteCart from './white-cart.svg'
 
 export {
     IconHome,
@@ -25,5 +27,7 @@ export {
     IconChangePassword,
     IconSignOut,
     IconEditProfile,
-    IconHistory
+    IconHistory,
+    IconBack,
+    IconWhiteCart
 };

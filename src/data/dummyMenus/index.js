@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconChangePassword, IconEditProfile, IconHistory, IconSignOut } from "../../assets";
 
-export const dummyMenu = [
+export const dummyMenus = [
     {
         id: 1,
         name: 'Edit Profile',
@@ -10,7 +10,7 @@ export const dummyMenu = [
     },
     {
         id: 2,
-        name: 'Change Passwor',
+        name: 'Change Password',
         picture: <IconChangePassword />,
         page: 'ChangePassword'
     },
