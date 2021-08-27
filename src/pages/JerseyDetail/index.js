@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
-import { Button, CardLiga } from '../../components';
+import { Button, CardLiga, JerseySlider } from '../../components';
 import { colors, fonts, responsiveHeight, heightMobileUI, numberWithCommas } from '../../utils';
 import { RFValue } from 'react-native-responsive-fontsize';
 
@@ -25,6 +25,7 @@ class JerseyDetail extends Component {
                         onPress={() => navigation.goBack()}
                     />
                 </View>
+                <JerseySlider image={image}/>
                 <View style={styles.container}>
                     <View style={styles.liga}>
                         <CardLiga liga={jersey.liga} />
@@ -36,7 +37,7 @@ class JerseyDetail extends Component {
                         <View style={styles.garis}></View>
 
                         <View style={styles.wrapperTypeWeight}>
-                            <Text style={styles.typeWeight}>Jenis : {jersey.type}</Text> 
+                            <Text style={styles.typeWeight}>Jenis : {jersey.type}</Text>
                             <Text style={styles.typeWeight}>Berat : {jersey.weight} Kg</Text>
                         </View>
                     </View>
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     container: {
         position: 'absolute',
         bottom: 0,
-        height: responsiveHeight(430),
+        height: responsiveHeight(400),
         backgroundColor: colors.white,
         width: '100%',
         borderTopLeftRadius: 40,
@@ -63,7 +64,8 @@ const styles = StyleSheet.create({
     button: {
         position: 'absolute',
         marginTop: 30,
-        marginLeft: 30
+        marginLeft: 30,
+        zIndex: 1
     },
     desc: {
         marginHorizontal: 30
