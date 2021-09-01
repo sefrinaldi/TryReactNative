@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
-import { Button, CardLiga, JerseySlider } from '../../components';
-import { colors, fonts, responsiveHeight, heightMobileUI, numberWithCommas } from '../../utils';
+import { Button, CardLiga, Inputan, Jarak, JerseySlider, Pilihan } from '../../components';
+import { colors, fonts, responsiveHeight, heightMobileUI, numberWithCommas, responsiveWidth } from '../../utils';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 
@@ -25,7 +25,7 @@ class JerseyDetail extends Component {
                         onPress={() => navigation.goBack()}
                     />
                 </View>
-                <JerseySlider image={image}/>
+                <JerseySlider image={image} />
                 <View style={styles.container}>
                     <View style={styles.liga}>
                         <CardLiga liga={jersey.liga} />
@@ -40,6 +40,36 @@ class JerseyDetail extends Component {
                             <Text style={styles.typeWeight}>Jenis : {jersey.type}</Text>
                             <Text style={styles.typeWeight}>Berat : {jersey.weight} Kg</Text>
                         </View>
+
+                        <View style={styles.wrapperInput}>
+                            <Inputan label="Jumlah"
+                                width={responsiveWidth(166)}
+                                height={responsiveHeight(43)}
+                                fontSize={13}
+                            />
+                            <Pilihan
+                                label="Pilih Ukuran"
+                                width={responsiveWidth(166)}
+                                height={responsiveHeight(43)}
+                                fontSize={13}
+                                sizes={jersey.size}
+                            />
+                        </View>
+                        <Inputan
+                            textarea
+                            label="Keterangan"
+                            fontSize={13}
+                            placeholder="Isi jika ingin menambahkan Name Tag 
+                            (nama dan nomor ounggung)"
+                        />
+                        <Jarak height={15} />
+                        <Button
+                            title="Masuk Keranjang"
+                            type="textIcon"
+                            icon="whiteCart"
+                            padding={responsiveHeight(17)}
+                            fontSize={18}
+                        />
                     </View>
                 </View>
             </View>
@@ -90,12 +120,17 @@ const styles = StyleSheet.create({
     },
     wrapperTypeWeight: {
         flexDirection: 'row',
-        // justifyContent: 'space-between'
+        // justifyContent: 'space-between',
+        marginBottom: 5
     },
     typeWeight: {
         fontFamily: fonts.primary.regular,
         fontSize: 13,
         marginRight: 40
+    },
+    wrapperInput: {
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     }
 })
 

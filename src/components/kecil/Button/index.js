@@ -1,8 +1,9 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { IconBack, IconShoppingCart } from '../../../assets'
+import { IconBack, IconShoppingCart, IconWhiteCart } from '../../../assets'
 import { colors } from '../../../utils'
 import TextOnly from './TextOnly'
+import TextIcon from './TextIcon'
 
 const Button = (props) => {
 
@@ -13,12 +14,16 @@ const Button = (props) => {
             return <IconShoppingCart />
         } else if (icon === "arrow-left") {
             return <IconBack />
+        } else if (icon === "whiteCart") {
+            return <IconWhiteCart />
         }
         return <IconShoppingCart />
     }
 
     if (type === "text"){
         return <TextOnly {...props} onPress={onPress} />
+    } else if (type === "textIcon") {
+        return <TextIcon {...props}/>
     }
     
     return (
