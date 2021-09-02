@@ -31,7 +31,7 @@ export class Home extends Component {
                     renderItem={<ListLiga />}
                 /> */}
                     <View>
-                        <HeaderComponent />
+                        <HeaderComponent navigation={navigation}/>
                     </View>
                     <View>
                         <BannerSlider />

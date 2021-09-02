@@ -20,7 +20,7 @@ export class ListJersey extends Component {
         return (
             <View style={styles.page}>
                 <View>
-                    <HeaderComponent />
+                    <HeaderComponent navigation={navigation}/>
                 </View>
                 <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
                     <View style={styles.pilihLiga}>

@@ -2,10 +2,19 @@ import React, { Component } from 'react'
 import { View, StyleSheet, TextInput } from 'react-native'
 import { IconSearch } from '../../../assets'
 import { colors, fonts, responsiveHeight } from '../../../utils'
-import { Button, Jarak } from '../../../components'
+import { Button, Jarak } from '../../kecil'
 
 export class HeaderComponent extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             
+        }
+    }
+    
     render() {
+        // const { navigation } = this.props
         return (
             <View style={styles.container}>
                 <View style={styles.wrapperHeader}>
@@ -19,7 +28,7 @@ export class HeaderComponent extends Component {
                     <Jarak width={10} />
 
                     {/* ButtonCart */}
-                    <Button icon="cart" padding={10}/>
+                    <Button icon="cart" padding={10} onPress={() => this.props.navigation.navigate('Cart')}/>
                 </View>
             </View>
         )

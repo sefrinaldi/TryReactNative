@@ -23,7 +23,7 @@ const Button = (props) => {
     if (type === "text"){
         return <TextOnly {...props} onPress={onPress} />
     } else if (type === "textIcon") {
-        return <TextIcon {...props}/>
+        return <TextIcon {...props} onPress={onPress}/>
     }
     
     return (

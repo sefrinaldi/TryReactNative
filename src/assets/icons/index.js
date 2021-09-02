@@ -13,6 +13,7 @@ import IconEditProfile from './user-edit.svg'
 import IconHistory from './history.svg'
 import IconBack from './arrow-left.svg'
 import IconWhiteCart from './white-cart.svg'
+import IconDelete from './delete.svg'
 
 export {
     IconHome,
@@ -29,5 +30,6 @@ export {
     IconEditProfile,
     IconHistory,
     IconBack,
-    IconWhiteCart
+    IconWhiteCart,
+    IconDelete
 };
