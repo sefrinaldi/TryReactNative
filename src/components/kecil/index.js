@@ -6,6 +6,7 @@ import CardMenu from "./CardMenu";
 import Inputan from "./Inputan";
 import Pilihan from "./Pilihan";
 import CardCart from "./CardCart";
+import CardAlamat from "./CardAlamat";
 
 export { 
     Button, 
@@ -15,5 +16,6 @@ export {
     CardMenu, 
     Inputan, 
     Pilihan, 
-    CardCart 
+    CardCart,
+    CardAlamat
 }

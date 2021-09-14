@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, Splash, ListJersey, Profile, JerseyDetail, Cart } from '../pages';
+import { Home, Splash, ListJersey, Profile, JerseyDetail, Cart, Checkout } from '../pages';
 import { BottomNavigator } from '../components';
 
 const Stack = createNativeStackNavigator();
@@ -40,6 +40,10 @@ class Router extends Component {
                     name="Cart"
                     component={Cart}
                     options={{ title: "Keranjang" }}
+                />
+                <Stack.Screen 
+                    name="Checkout"
+                    component={Checkout}
                 />
             </Stack.Navigator>
         )

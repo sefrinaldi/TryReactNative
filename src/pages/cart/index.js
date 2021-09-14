@@ -28,6 +28,7 @@ class Cart extends Component {
                         icon="whiteCart"
                         fontSize={18}
                         padding={responsiveHeight(15)}
+                        onPress={()=> this.props.navigation.navigate('Checkout')}
                     />
                 </View>
             </View>
