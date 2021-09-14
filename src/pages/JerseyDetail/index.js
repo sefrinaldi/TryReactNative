@@ -52,7 +52,7 @@ class JerseyDetail extends Component {
                                 width={responsiveWidth(166)}
                                 height={responsiveHeight(43)}
                                 fontSize={13}
-                                sizes={jersey.size}
+                                datas={jersey.size}
                             />
                         </View>
                         <Inputan

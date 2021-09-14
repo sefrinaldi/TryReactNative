@@ -9,9 +9,12 @@ class CardMenu extends Component {
         this.state = {}
     }
     render() {
-        const { menu } = this.props
+        const { menu, navigation } = this.props
         return (
-            <TouchableOpacity style={styles.container}>
+            <TouchableOpacity
+                style={styles.container}
+                onPress={ () => navigation.navigate(menu.page)}
+            >
                 <View style={styles.menu}>
                     {menu.picture}
                     <Text style={styles.text}>{menu.name}</Text>

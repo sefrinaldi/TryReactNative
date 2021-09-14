@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { IconBack, IconShoppingCart, IconWhiteCart } from '../../../assets'
+import { IconBack, IconShoppingCart, IconSubmit, IconWhiteCart } from '../../../assets'
 import { colors } from '../../../utils'
 import TextOnly from './TextOnly'
 import TextIcon from './TextIcon'
@@ -16,6 +16,8 @@ const Button = (props) => {
             return <IconBack />
         } else if (icon === "whiteCart") {
             return <IconWhiteCart />
+        } else if (icon === 'submit') {
+            return <IconSubmit />
         }
         return <IconShoppingCart />
     }

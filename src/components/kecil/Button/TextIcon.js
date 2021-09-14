@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import { IconWhiteCart, IconShoppingCart } from '../../../assets'
+import { IconWhiteCart, IconShoppingCart, IconSubmit } from '../../../assets'
 import { colors, fonts } from '../../../utils'
 import Jarak from '../Jarak'
 
@@ -12,6 +12,8 @@ const TextIcon = ({icon, padding, onPress, title, fontSize}) => {
             return <IconBack />
         } else if (icon === "whiteCart") {
             return <IconWhiteCart />
+        } else if (icon === 'submit') {
+            return <IconSubmit />
         }
         return <IconShoppingCart />
     }

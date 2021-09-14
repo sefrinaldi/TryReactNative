@@ -14,6 +14,7 @@ import IconHistory from './history.svg'
 import IconBack from './arrow-left.svg'
 import IconWhiteCart from './white-cart.svg'
 import IconDelete from './delete.svg'
+import IconSubmit from './submit.svg'
 
 export {
     IconHome,
@@ -31,5 +32,6 @@ export {
     IconHistory,
     IconBack,
     IconWhiteCart,
-    IconDelete
+    IconDelete,
+    IconSubmit
 };

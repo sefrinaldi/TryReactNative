@@ -17,6 +17,7 @@ class Profile extends Component {
     }
     render() {
         const { profile, menus } = this.state
+        const { navigation } = this.props
         return (
             <View style={styles.page}>
                 <View style={styles.container}>
@@ -26,7 +27,7 @@ class Profile extends Component {
                         <Text style={styles.desc}>No. Hp {profile.hp}</Text>
                         <Text style={styles.desc}>{profile.alamat} {profile.kota}</Text>
                     </View>
-                    <ListMenu menus={menus}/>
+                    <ListMenu menus={menus} navigation={navigation}/>
                 </View>
             </View>
         );

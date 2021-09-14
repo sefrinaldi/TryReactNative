@@ -2,19 +2,24 @@ import React from 'react'
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import { colors, fonts } from '../../../utils'
 
-const Inputan = ({ textarea, label, width, height, fontSize, placeholder }) => {
+const Inputan = ({ textarea, label, width, height, fontSize, placeholder, value }) => {
     if (textarea) {
         return (
             <View style={styles.container}>
                 <Text style={styles.label(fontSize)}>{label} :</Text>
-                <TextInput style={styles.inputTextArea(fontSize)} multiline={true} numberOfLines={3} />
+                <TextInput
+                    style={styles.inputTextArea(fontSize)}
+                    multiline={true}
+                    numberOfLines={3}
+                    value={value}
+                />
             </View>
         )
     }
     return (
         <View style={styles.container}>
             <Text style={styles.label(fontSize)}>{label} :</Text>
-            <TextInput style={styles.input(width, height, fontSize)}/>
+            <TextInput style={styles.input(width, height, fontSize)} value={value} />
         </View>
     )
 }
@@ -32,7 +37,7 @@ const styles = StyleSheet.create({
     input: (width, height, fontSize) => ({
         width: width,
         height: height,
-        fontSize: fontSize ? fontSize: 18,
+        fontSize: fontSize ? fontSize : 18,
         fontFamily: fonts.primary.regular,
         borderWidth: 1,
         borderRadius: 5,
@@ -41,7 +46,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10
     }),
     inputTextArea: fontSize => ({
-        fontSize: fontSize ? fontSize: 18,
+        fontSize: fontSize ? fontSize : 18,
         fontFamily: fonts.primary.regular,
         borderWidth: 1,
         borderRadius: 5,

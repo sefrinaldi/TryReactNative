@@ -8,11 +8,11 @@ class ListMenu extends Component {
         this.state = {}
     }
     render() {
-        const { menus } = this.props
+        const { menus, navigation } = this.props
         return (
             <View>
                 {menus.map(menu => {
-                    return <CardMenu menu={menu} key={menu.id}/>
+                    return <CardMenu menu={menu} key={menu.id} navigation={navigation}/>
                 })}
             </View>
         );

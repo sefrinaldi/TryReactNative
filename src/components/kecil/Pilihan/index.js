@@ -5,7 +5,7 @@ import { Picker } from '@react-native-picker/picker'
 
 const Pilihan = (props) => {
 
-    const { label, width, height, fontSize, sizes } = props
+    const { label, width, height, fontSize, datas } = props
 
     const [selectedValue, setselectedValue] = useState('');
 
@@ -19,8 +19,9 @@ const Pilihan = (props) => {
                     onValueChange={(itemValue, itemIndex) =>
                         setselectedValue(itemValue)
                     }>
-                    {sizes.map((item, index) => {
-                        return <Picker.Item label={item} value={item} key={index} />
+                        <Picker.Item label="--Pilih--" value="" />
+                        {datas.map((item, index) => {
+                            return <Picker.Item label={item} value={item} key={index} />
                     })}
                 </Picker>
             </View>
@@ -45,8 +46,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     picker: (width, height, fontSize) => ({
-        width: width,
-        height: height,
+        width: width ? width : '100%',
+        height: height ? height : 46,
         fontSize: fontSize ? fontSize : 18,
         fontFamily: fonts.primary.regular
     })
