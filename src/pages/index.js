@@ -7,6 +7,7 @@ import Cart from "./cart";
 import Checkout from './checkout'
 import EditProfile from "./editProfile";
 import ChangePassword from "./changePassword";
+import History from "./history";
 
 export { 
     Home, 
@@ -17,5 +18,6 @@ export {
     Cart, 
     Checkout,
     EditProfile,
-    ChangePassword
+    ChangePassword,
+    History
 }

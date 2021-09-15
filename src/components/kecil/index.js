@@ -7,6 +7,7 @@ import Inputan from "./Inputan";
 import Pilihan from "./Pilihan";
 import CardCart from "./CardCart";
 import CardAlamat from "./CardAlamat";
+import CardHistory from "./CardHistory";
 
 export { 
     Button, 
@@ -17,5 +18,6 @@ export {
     Inputan, 
     Pilihan, 
     CardCart,
-    CardAlamat
+    CardAlamat,
+    CardHistory
 }

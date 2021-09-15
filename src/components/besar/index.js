@@ -6,6 +6,7 @@ import ListJerseys from "./ListJerseys";
 import ListMenu from "./ListMenu";
 import JerseySlider from "./JerseySlider";
 import ListCart from "./ListCart";
+import ListHistory from "./ListHistory";
 
 export { 
     BottomNavigator, 
@@ -15,5 +16,6 @@ export {
     ListJerseys, 
     ListMenu, 
     JerseySlider,
-    ListCart
+    ListCart,
+    ListHistory
 }
