@@ -6,6 +6,7 @@ import JerseyDetail from "./JerseyDetail";
 import Cart from "./cart";
 import Checkout from './checkout'
 import EditProfile from "./editProfile";
+import ChangePassword from "./changePassword";
 
 export { 
     Home, 
@@ -15,5 +16,6 @@ export {
     JerseyDetail, 
     Cart, 
     Checkout,
-    EditProfile
+    EditProfile,
+    ChangePassword
 }

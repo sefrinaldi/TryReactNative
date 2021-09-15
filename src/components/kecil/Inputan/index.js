@@ -2,7 +2,10 @@ import React from 'react'
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import { colors, fonts } from '../../../utils'
 
-const Inputan = ({ textarea, label, width, height, fontSize, placeholder, value }) => {
+const Inputan = (props) => {
+
+    const { textarea, label, width, height, fontSize, placeholder, value, secureTextEntry } = props
+
     if (textarea) {
         return (
             <View style={styles.container}>
@@ -19,7 +22,11 @@ const Inputan = ({ textarea, label, width, height, fontSize, placeholder, value 
     return (
         <View style={styles.container}>
             <Text style={styles.label(fontSize)}>{label} :</Text>
-            <TextInput style={styles.input(width, height, fontSize)} value={value} />
+            <TextInput
+                style={styles.input(width, height, fontSize)}
+                value={value}
+                secureTextEntry={secureTextEntry}
+            />
         </View>
     )
 }
