@@ -2,10 +2,10 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { colors, fonts } from '../../../utils'
 
-const TextOnly = ({padding, title, onPress }) => {    
+const TextOnly = ({padding, title, onPress, fontSize }) => {    
     return (
         <TouchableOpacity style={styles.container(padding)} onPress={onPress}>
-            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.title(fontSize)}>{title}</Text>
         </TouchableOpacity>
     )
 }
@@ -19,10 +19,10 @@ const styles = StyleSheet.create({
         padding: padding,   
         marginBottom: 10           
     }),
-    title: {
+    title: (fontSize) => ({
         color: colors.white,
         textAlign: 'center',
-        fontSize: 13,
+        fontSize: fontSize ? fontSize : 13,
         fontFamily: fonts.primary.bold,        
-    }
+    })
 })

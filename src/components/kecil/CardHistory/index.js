@@ -1,6 +1,5 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
-import { Jarak } from '..'
 import { colors, fonts, numberWithCommas, responsiveWidth } from '../../../utils'
 
 const CardHistory = ({ pesanan }) => {
@@ -16,8 +15,6 @@ const CardHistory = ({ pesanan }) => {
                         <View style={styles.desc}>
                             <Text style={styles.name}>{history.product.name}</Text>
                             <Text style={styles.price}>Rp. {numberWithCommas(history.product.price)}</Text>
-
-                            <Jarak height={10} />
 
                             <Text style={styles.textBold}>Pesan : {history.jumlahPesan}</Text>
                             <Text style={styles.textBold}>Total Harga : Rp. {numberWithCommas(history.totalHarga)}</Text>
@@ -86,7 +83,8 @@ const styles = StyleSheet.create({
     },
     price: {
         fontFamily: fonts.primary.regular,
-        fontSize: 12
+        fontSize: 12,
+        marginBottom: 10
     },
     footer: {
         flexDirection: 'row',

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, Splash, ListJersey, Profile, JerseyDetail, Cart, Checkout, EditProfile, ChangePassword, History } from '../pages';
+import { Home, Splash, ListJersey, Profile, JerseyDetail, Cart, Checkout, EditProfile, ChangePassword, History, Login } from '../pages';
 import { BottomNavigator } from '../components';
 
 const Stack = createNativeStackNavigator();
@@ -59,6 +59,11 @@ class Router extends Component {
                     name="History"
                     component={History}
                     options={{ title: 'History Pesanan' }}
+                />
+                <Stack.Screen 
+                    name="Login"
+                    component={Login}
+                    options={{ headerShown: false }}
                 />
             </Stack.Navigator>
         )

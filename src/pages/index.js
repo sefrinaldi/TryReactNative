@@ -8,6 +8,7 @@ import Checkout from './checkout'
 import EditProfile from "./editProfile";
 import ChangePassword from "./changePassword";
 import History from "./history";
+import Login from "./login";
 
 export { 
     Home, 
@@ -19,5 +20,6 @@ export {
     Checkout,
     EditProfile,
     ChangePassword,
-    History
+    History,
+    Login
 }
